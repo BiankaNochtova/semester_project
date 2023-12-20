@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="/global.css">
+</head>
+<body>
+
+
+  <header class="header-container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#"><img src="./imgs/THRIFTING treasures.png" alt=""></a>
+      <div class="" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sustainability.html">Sustainability</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tips.html">Tips&Tricks</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Shops
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" id="shopDropdown">
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+      <section class="sustainability-banner">
+        <div class="container">
+          <h1>Sustainability</h1>
+          <p class="subtitle">How Secondhand Shopping Helps Environment</p>
+          <button class="btn btn-primary">Post your finds!</button>
+        </div>
+      </section>
+
+
+      <article class="article-content">
+        <h2>Introduction:</h2>
+        <p>In recent times, there has been an increasing recognition of the necessity to embrace more sustainable lifestyle choices for environmental protection and resource conservation. A key approach to achieving this objective is through the adoption of thrifting, or the practice of shopping for secondhand items. This article will delve into the diverse ways in which thrifting can effectively diminish one's environmental footprint while still enabling the cultivation of a stylish and practical wardrobe.</p>
+        
+        <h3>1. Environmental Implications of Fast Fashion</h3>
+        <p>The contemporary fashion industry, particularly the fast fashion sector, has gained notoriety for its adverse environmental effects. Contributing factors to this predicament encompass:</p>
+        <ul>
+          <li><strong>a. Overproduction:</strong> The continuous influx of new clothing releases and trends results in excessive garment production, with many ending up in landfills or being incinerated.</li>
+          <li><strong>b. Resource depletion:</strong> Clothing production demands substantial amounts of water, energy, and raw materials like cotton and synthetic fibers, leading to resource depletion and damage to ecosystems.</li>
+          <li><strong>c. Pollution:</strong> Manufacturing processes involved in textile and garment production often give rise to significant air, water, and soil pollution due to the release of chemicals and waste products.</li>
+        </ul>
+        
+        <h3>2. Thrifting as a Supporter of Sustainable Fashion</h3>
+        <p>Thrifting presents an alternative to the fast fashion model by advocating for the reuse and recycling of clothing and other items. By opting for secondhand items, individuals can:</p>
+        <ul>
+          <li><strong>a. Reduce waste:</strong> Purchasing pre-owned items helps prevent them from ending up in landfills or being incinerated, thereby reducing overall waste generation.</li>
+          <li><strong>b. Conserve resources:</strong> Acquiring secondhand items diminishes the demand for new products, consequently decreasing the resources required for production.</li>
+          <li><strong>c. Minimize pollution:</strong> Supporting the secondhand market indirectly lessens the pollution associated with the production of new items.</li>
+        </ul>
+        
+        <h3>3. The Lifecycle of a Secondhand Garment</h3>
+        <p>When one purchases a thrifted garment, it extends its lifecycle and contributes to a more circular economy. The lifecycle of a thrifted garment typically involves these stages:</p>
+        <ul>
+          <li><strong>a. Production:</strong> The initial creation of the garment, involving raw material sourcing, manufacturing, and transportation.</li>
+          <li><strong>b. First owner:</strong> The original owner purchases and uses the garment.</li>
+          <li><strong>c. Donation or resale:</strong> The first owner donates or sells the garment to a thrift store, consignment shop, or online resale platform.</li>
+          <li><strong>d. Second owner:</strong> The thrifted garment is purchased and used by a new owner, who may later decide to donate or resell it again, further extending its lifecycle.</li>
+        </ul>
+        
+        <h2>Conclusion</h2>
+        <p>Thrifting emerges as a potent means of positively influencing the environment while maintaining a fashionable and functional wardrobe. By embracing secondhand shopping, engaging in repair and upcycling practices, and adopting eco-conscious thrifting habits, individuals can actively contribute to waste reduction, resource conservation, and pollution minimization within the fashion industry.</p>
+      </article>
+      
+
+
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
+
+<script>
+  // Function to add shops to the dropdown menu
+  function addShopsToDropdown(shops) {
+    var dropdown = document.getElementById('shopDropdown');
+    shops.forEach(function(shop) {
+      var a = document.createElement('a');
+      a.classList.add('dropdown-item');
+      a.href = "#"; 
+      a.textContent = shop.name;
+      dropdown.appendChild(a);
+    });
+  }
+
+  // Fetch the shop data from the data.json file
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      addShopsToDropdown(data.thrift_shops);
+    })
+    .catch(error => console.error('Error:', error));
+
+
+
+    function addShopsToLearnMoreSection(shops) {
+    var row = document.getElementById('thriftStoresRow');
+    shops.forEach(function(shop) {
+      var col = document.createElement('div');
+      col.className = 'col-sm-6 col-md-3';
+      col.innerHTML = `
+        <div class="store-card">
+          <img src="${shop.image}" class="store-image" alt="${shop.name}">
+          <div class="store-info">
+            <h5>${shop.name}</h5>
+            <a href="#" class="stretched-link">Learn more ></a>
+          </div>
+        </div>
+      `;
+      row.appendChild(col);
+    });
+  }
+
+  // Fetch the shop data from the data.json file
+  fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+      addShopsToLearnMoreSection(data.thrift_shops);
+    })
+    .catch(error => console.error('Error:', error));
+</script>
+
+<style>
+    body{
+        background-color: #F3F1E5;
+    }
+    .header-container {
+      background-color: #668D6C; 
+      padding: 10px 0;
+    }
+    .navbar {
+      justify-content: center;
+    }
+    .navbar-brand {
+      font-size: 2em; /* Large font size for the brand name */
+      color: #1d3557; 
+      margin-right: 30px; /* Space after the brand name */
+    }
+    .nav-link {
+      color: #1d3557; 
+      margin: 0 10px; /* Space around each nav item */
+    }
+    /* Additional styles for active or hover state of nav links */
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #457b9d; /* Darker shade or different color for hover state */
+      text-decoration: underline!important;
+    }
+
+    .nav-link:active{
+        text-decoration: underline!important;
+    }
+
+
+    .sustainability-banner {
+  background: url('/imgs/main-picture.jpg') no-repeat center center; 
+  background-size: cover;
+  padding: 40px 0;
+  color: #FFA500; 
+  text-align: left;
+}
+
+.sustainability-banner .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+}
+
+.sustainability-banner h1 {
+  font-size: 3em; 
+  margin-bottom: 0.5em;
+  color: #FFA500; 
+}
+
+.sustainability-banner .subtitle {
+  font-size: 1.5em; 
+  color: #FFFFFF; 
+  margin-bottom: 1em;
+}
+
+.sustainability-banner .btn {
+
+  color: #FFFFFF; 
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+.sustainability-banner .btn:hover {
+  /* background-color: #d62828; Darker background color on hover */
+}
+
+/* Responsivness */
+@media (max-width: 768px) {
+  .sustainability-banner h1 {
+    font-size: 2em; /* Smaller font size for mobile */
+  }
+
+  .sustainability-banner .subtitle {
+    font-size: 1em; /* Smaller font size for mobile */
+  }
+}
+
+.article-content {
+  background-color: #fff; 
+  font-family: 'Arial', sans-serif; 
+  max-width: 800px;
+  margin: 20px auto; /* Centers the article on the page */
+  padding: 50px; /* Padding inside the article */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 14px;
+  border: 1px solid black;
+}
+
+.article-content h2, .article-content h3 {
+  color: #333; /* Dark grey color for headings */
+}
+
+.article-content p {
+  color: #666; /* Lighter grey color for paragraphs */
+  line-height: 1.6; 
+}
+
+.article-content ul {
+  padding-left: 20px; /* Indent for the unordered list */
+  list-style-type: disc; /* Style of bullet points */
+}
+
+.article-content ul li {
+  margin-bottom: 10px; /* Space between list items */
+}
+
+.article-content ul li strong {
+  color: #333; /* Dark grey color for list item headings */
+}
+
+
+</style>

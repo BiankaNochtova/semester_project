@@ -1,0 +1,29 @@
+.header-container {
+    background-color: #668D6C; 
+    padding: 10px 0;
+  }
+
+  
+  .navbar-brand {
+    font-size: 2em; /* Large font size for the brand name */
+    color: #1d3557; 
+    margin-right: 30px; /* Space after the brand name */
+  }
+  .nav-link {
+    color: #1d3557; 
+    margin: 0 10px; /* Space around each nav item */
+  }
+  /* Additional styles for active or hover state of nav links */
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #457b9d; /* Darker shade or different color for hover state */
+  }
+
+.btn{
+    background-color: #E29358!important;
+    border-radius: 15px!important;
+}
+
+button:hover{
+    border: 1px solid black;
+}

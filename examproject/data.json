@@ -1,0 +1,46 @@
+{
+    "thrift_shops": [
+      {
+        "name": "Blue Cross OP Shop",
+        "image": "/imgs/thrift1.jpeg",
+        "address": "Paludan-Müllers Vej 38, 8200 Aarhus",
+        "opening_hours": {
+          "sun_mon": "Closed",
+          "tue_fri": "10-17:00",
+          "sat": "10-14:00"
+        },
+        "offer": "In this thrift store you can not only find clothes but also furniture, books, kitchenware, porcelain, kids toys, vinyls and CDs and also textil.",
+        "clothes": "This thrift store has a lot to offer even with the clothing. I would say that general style is 90’s-00’s with very reasonable prices.",
+        "atmosphere": "You will be welcomed by bright overhead lightning. Its a very quiet place usually. I find the aesthetic of this thrift store to be very elegant and very well organized."
+      },
+      {
+        "name": "All Time Vintage",
+        "image": "/imgs/thrift3.jpeg",
+        "address": "Nørregade 42, 8000 Aarhus",
+        "opening_hours": {
+          "mon_fri": "11-17:30",
+          "sat": "11-16:00",
+          "sun": "Closed"
+        },
+        "offer": "This thrift store offers only real vintage clothes and accessories like bags, hats, belts or jewellery. But be prepared to go deep in your pockets because they are not cheap!",
+        "clothes": "Not only you can find basic vintage clothes but if you are lucky you can also find sportswear like Patagonia or North Face.",
+        "atmosphere": "The thrift store exuded a warm and inviting atmosphere, creating a cozy and comfortable environment for shoppers to explore and discover hidden treasures."
+      },
+      {
+        "name": "Salvation Army",
+        "image": "/imgs/thrift4.jpeg",
+        "address": "Nørregade 46, 8000 Aarhus",
+        "opening_hours": {
+          "mon_fri": "10-17:00",
+          "sat": "10-15:00",
+          "sun": "Closed"
+        },
+        "offer": "Besides clothes, in this thrift store you will find small section of books, accessories, posters and bags.",
+        "clothes": "Good variety of clothing, mostly 80’s-00’s style. Be careful in the jacket section tho because the prices can go up very quickly.",
+        "atmosphere": "Very bright lights with classical music in the background. The best part were the forbearing saleswomen who will help you with everything."
+      }
+    ],
+    "website_navigation": ["Home", "Sustainability", "Tips&Tricks", "Shops"],
+    "post_findings": true
+  }
+  
